@@ -4,22 +4,15 @@
   "main": "src/public-api.ts",
   "devDependencies": {
     "@types/highlight.js": "^9.1.9",
-    "@types/markdown-it": "0.0.2"
+    "@types/marked": "^0.7.2"
+  },
+  "dependencies": {
+    "highlight.js": "^9.0.0",
+    "marked": "^0.8.0"
   },
   "peerDependencies": {
     "@angular/common": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
     "@angular/core": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
-    "@ui-model/angular": "0.2.2",
-    "highlight.js": "^9.10.0",
-    "markdown-it": "^8.3.1",
-    "markdown-it-abbr": "^1.0.4",
-    "markdown-it-deflist": "^2.0.1",
-    "markdown-it-emoji": "^1.3.0",
-    "markdown-it-footnote": "^3.0.1",
-    "markdown-it-ins": "^2.0.0",
-    "markdown-it-mark": "^2.0.0",
-    "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0",
-    "markdown-it-table-of-contents": "^0.3.2"
+    "@ui-model/angular": "0.2.2"
   }
 }

@@ -1,16 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { highlightAuto } from 'highlight.js';
-
-const defaultLanguages = ['ts', 'js', 'html', 'scss', 'css'];
+import { HighlightService } from '../services/highlight.service';
 
 @Pipe({
   name: 'highlight',
 })
 export class HighlightPipe implements PipeTransform {
-  transform(value: string, language: string = 'ts'): string {
+  constructor(private highlighter: HighlightService) {
+  }
+
+  transform(value: string, languageSubset?: string[]): string {
     if (!value) {
       return;
     }
-    return highlightAuto(value, [language].concat(defaultLanguages)).value;
+    return this.highlighter.render(value, languageSubset).value;
   }
 }
